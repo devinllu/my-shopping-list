@@ -6,7 +6,7 @@ import java.util.List;
 public class ItemManager {
     private List<Item> lst = new ArrayList<>();
 
-    public ItemManager(List<Item> lst) {
+    public ItemManager() {
         lst.add(new Item("eggs", 1));
         lst.add(new Item("bread", 1));
         lst.add(new Item("bananas", 1));
