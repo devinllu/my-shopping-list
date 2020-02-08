@@ -2,6 +2,9 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/quicksand</item>
+<<<<<<< HEAD
         <item>@font/quicksand_light</item>
+=======
+>>>>>>> 7cb09c9b47bc1eaab237bfe09798d5113f0b11bd
     </array>
 </resources>
