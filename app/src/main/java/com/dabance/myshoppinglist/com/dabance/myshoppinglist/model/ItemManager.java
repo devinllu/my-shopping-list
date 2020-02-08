@@ -29,4 +29,14 @@ public class ItemManager {
     public Item getItem(int index) {
         return lst.get(index);
     }
+
+    public void sortByQuantity() {
+
+        lst.sort(new quantityComparator());
+
+    }
+    
+    public void sortByName() {
+        lst.sort(new nameComparator());
+    }
 }

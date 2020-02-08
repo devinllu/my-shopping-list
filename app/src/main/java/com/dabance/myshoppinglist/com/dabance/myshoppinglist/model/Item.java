@@ -27,6 +27,6 @@ public class Item {
     }
 
     public String getItemData(){
-        return name + "," + quantity;
+        return name + ", " + quantity;
     }
 }
