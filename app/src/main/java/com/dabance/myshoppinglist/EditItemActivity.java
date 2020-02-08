@@ -12,10 +12,10 @@ public class EditItemActivity extends AppCompatActivity {
     private static final String ITEM_DATA= "com.dabance.myshoppinglist.EditItemActivity - item data";
     private String itemData;
 
-    public static Intent makeIntent(Context context, String lensData ){
+    public static Intent makeIntent(Context context, String itemData){
 
         Intent intent = new Intent(context, EditItemActivity.class);
-        intent.putExtra(ITEM_DATA, lensData);
+        intent.putExtra(ITEM_DATA, itemData);
         return intent;
     }
 
