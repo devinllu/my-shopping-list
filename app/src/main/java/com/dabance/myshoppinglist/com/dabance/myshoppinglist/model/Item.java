@@ -1,5 +1,7 @@
 package com.dabance.myshoppinglist.com.dabance.myshoppinglist.model;
 
+import androidx.annotation.NonNull;
+
 public class Item {
 
     private String name;
@@ -28,5 +30,11 @@ public class Item {
 
     public String getItemData(){
         return name + "," + quantity;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return name + " x " + quantity;
     }
 }
