@@ -42,13 +42,4 @@ public class ItemManager implements Iterable<Item> {
         return itemList.iterator();
     }
 
-    public void sortByQuantity() {
-
-        lst.sort(new quantityComparator());
-
-    }
-    
-    public void sortByName() {
-        lst.sort(new nameComparator());
-    }
 }
