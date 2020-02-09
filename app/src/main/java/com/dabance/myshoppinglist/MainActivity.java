@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.dabance.myshoppinglist.com.dabance.myshoppinglist.model.Item;
@@ -33,8 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
         itemManager = ItemManager.getInstance();
 
+        sortByNameButton();
+        sortByQuantityButton();
+
         loadItems();
         populateList();
+
 
         FloatingActionButton fab = findViewById(R.id.addFAB);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -46,6 +51,44 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void sortByQuantityButton() {
+        final Button button = findViewById(R.id.sortQuantityButton);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                itemManager.sortByQuantity();
+
+                populateList();
+//                finish();
+//                overridePendingTransition(0, 0);
+//                startActivity(getIntent());
+//                overridePendingTransition(0, 0);
+            }
+        });
+
+    }
+
+    private void sortByNameButton() {
+        Button button = findViewById(R.id.sortNameButton);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                itemManager.sortByName();
+                populateList();
+
+
+//                finish();
+//                overridePendingTransition(0, 0);
+//                startActivity(getIntent());
+//                overridePendingTransition(0, 0);
+            }
+        });
+
+
     }
 
     @Override

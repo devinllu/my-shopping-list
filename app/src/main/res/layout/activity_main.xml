@@ -38,4 +38,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_input_add" />
 
+    <Button
+        android:id="@+id/sortNameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort by Name        "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sortQuantityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort by Quantity"
+        app:layout_constraintBottom_toTopOf="@+id/sortNameButton"
+        app:layout_constraintStart_toStartOf="@+id/sortNameButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,6 +18,7 @@ public class ItemManager implements Iterable<Item> {
     public static ItemManager getInstance() {
         if(instance == null) {
             instance = new ItemManager();
+
         }
         return instance;
     }
@@ -37,9 +38,44 @@ public class ItemManager implements Iterable<Item> {
         return itemList.get(index);
     }
 
+
+
+//    public void set(int index, Item item) {
+//        itemList[index] = item;
+//    }
+
+
+    public void sortByQuantity() {
+
+        for (int i = 0; i < itemList.size() - 1; i++) {
+            for (int j = i + 1; j < itemList.size(); j++) {
+                if (itemList.get(i).getQuantity() > itemList.get(j).getQuantity()) {
+                    Item temp = itemList.get(i);
+                    itemList.set(i, itemList.get(j));
+                    itemList.set(j, temp);
+                }
+            }
+        }
+
+    }
+
+    public void sortByName() {
+        for (int i = 0; i < itemList.size() - 1; i++) {
+            for (int j = i + 1; j < itemList.size(); j++) {
+                if (itemList.get(i).getName().compareTo(itemList.get(j).getName()) > 0) {
+                    Item temp = itemList.get(i);
+                    itemList.set(i, itemList.get(j));
+                    itemList.set(j, temp);
+                }
+            }
+        }
+    }
+
     @Override
     public Iterator<Item> iterator() {
         return itemList.iterator();
     }
+
+
 
 }
