@@ -8,7 +8,8 @@ design features to highlight the the aesthetic appeal of the application.
 
 - First get the Android Studio application on the computer which can be found here: https://developer.android.com/studio
 - Once downloaded, you then need to use Git to download the source code:  
-  - In terminal/shell/command prompt, type git clone <ssh or https repo>
+  - In terminal/shell/command prompt, type 
+  # git clone "ssh_or_https_of_repository"
   - The repository should then be cloned onto the directory you're in
   
 - Now open Android Studio and navigate to the repo you just cloned
